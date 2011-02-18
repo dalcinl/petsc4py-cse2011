@@ -1,0 +1,23 @@
+python module MyPDE
+interface
+
+   subroutine FormInitGuess(da, x, params, ierr)
+     integer, intent(in)      :: da, x
+     real(kind=8), intent(in) :: params(3)
+     integer, intent(out)     :: ierr
+   end subroutine FormInitGuess
+
+   subroutine FormFunction(da, x, F, params, ierr)
+     integer, intent(in)      :: da, x, F
+     real(kind=8), intent(in) :: params(3)
+     integer, intent(out)     :: ierr
+   end subroutine FormFunction
+
+   subroutine FormJacobian(da, x, J, params, ierr)
+     integer, intent(in)      :: da, x, J
+     real(kind=8), intent(in) :: params(3)
+     integer, intent(out)     :: ierr
+   end subroutine FormJacobian
+   
+end interface
+end python module MyPDE
