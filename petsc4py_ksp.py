@@ -1,3 +1,5 @@
+execfile('petsc4py_mat.py')
+
 # create linear solver,
 ksp = PETSc.KSP()
 ksp.create(PETSc.COMM_WORLD)

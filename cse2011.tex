@@ -119,9 +119,13 @@
   \frametitle{Features -- Interoperability}
   Support for wrapping other PETSc-based codes.
   \begin{itemize}
+  \item You can use \textbf{Cython} 
+    (\texttt{from petsc4py {\bf cimport} PETSc}).
   \item You can use \textbf{SWIG} (\textsl{typemaps} provided).
   \item You can use \textbf{F2Py} (\texttt{fortran} attribute).
   \end{itemize}
+  \bigskip
+  (more on this later \ldots)
 \end{frame}
 
 \begin{frame}[fragile]
@@ -195,7 +199,7 @@ Installing collected packages: numpy, petsc, petsc4py,
 
 \begin{frame}
   \frametitle{Linear Solvers (\texttt{KSP+PC})}
-  \small\inputminted[linenos]{python}{petsc4py_ksp.py}
+  \small\inputminted[linenos,firstline=3]{python}{petsc4py_ksp.py}
 \end{frame}
 
 % --- Nonlinear Solvers  ---
@@ -251,7 +255,7 @@ Installing collected packages: numpy, petsc, petsc4py,
         ~~~\text{at $t=0$},
       \end{aligned}
     \end{equation}
-  \item Nonlinear diffusion and line source terms:
+  \item Nonlinear diffusion and line source term:
     \begin{equation} 
       \begin{aligned}
         \kappa(\phi)=

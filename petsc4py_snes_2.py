@@ -3,8 +3,7 @@ snes = PETSc.SNES().create()
 # register the function in charge of
 # computing the nonlinear residual
 f = PETSc.Vec().createSeq(m*n)
-snes.setFunction(Bratu2D, f,
-                 args=(alpha, m, n))
+snes.setFunction(Bratu2D, f, args=(alpha, m, n))
 
 # configure the nonlinear solver
 # to use a matrix-free Jacobian
